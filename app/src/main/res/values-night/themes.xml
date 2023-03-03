@@ -1,0 +1,106 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Taskify.NoStatusBarTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@color/dt_darkpblue</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.Taskify" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/dt_darkpblue</item>
+        <item name="colorPrimaryVariant">@color/dt_blue</item>
+        <item name="colorOnPrimary">@color/dt_gray</item>
+        <item name="colorSurface">@color/dt_darkpblue</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/dt_yellow</item>
+        <item name="colorOnSecondary">@color/dt_darkpblue</item>
+
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+
+        <item name="colorBackgroundFloating">@color/dt_blue</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="@style/Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_bg</item>
+    </style>
+
+    <style name="gettingStartedTop">
+        <item name="android:background">@color/dt_deepblue</item>
+    </style>
+
+    <style name="grayText">
+        <item name="android:textColor">@color/gray2</item>
+    </style>
+
+    <style name="button_layout_getting_started">
+        <item name="android:background">@drawable/filled_round_button</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textAppearance">@style/TextAppearance.MdcTypographyStyles.Button</item>
+    </style>
+
+    <style name="gettingStartedHeading">
+        <item name="android:textColor">@color/dt_gray</item>
+    </style>
+
+    <style name="auth_top">
+        <item name="android:background">@color/dt_deepblue</item>
+    </style>
+
+    <style name="authTextBox">
+        <item name="android:background">@drawable/auth_text_bg</item>
+        <item name="android:textAppearance">@style/TextAppearance.MdcTypographyStyles.Body1</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="authButton">
+        <item name="android:background">@drawable/custom_button_bg</item>
+        <item name="android:textAppearance">@style/TextAppearance.MdcTypographyStyles.Button</item>
+        <item name="android:textColor">@color/dt_darkpblue</item>
+    </style>
+
+    <style name="googleLoginButton">
+        <item name="android:background">@drawable/getting_started_button_layout</item>
+        <item name="android:textAppearance">@style/TextAppearance.MdcTypographyStyles.Button</item>
+        <item name="android:drawableStart">@drawable/google</item>
+    </style>
+
+    <style name="appBar" parent="Widget.Design.AppBarLayout">
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Widget.App.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.TabLayout</item>
+    </style>
+
+    <style name="ThemeOverlay.App.TabLayout" parent="">
+        <item name="colorPrimary">@color/dt_yellow</item>
+        <item name="colorSurface">@color/dt_darkpblue</item>
+        <item name="colorOnSurface">@color/gray3</item>
+    </style>
+
+    <style name="add_task_top">
+        <item name="android:background">@color/dt_deepblue</item>
+    </style>
+
+    <style name="task" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/dt_blue</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <style name="completedTagText">
+        <item name="android:textColor">@color/dt_darkpblue</item>
+    </style>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.wadhwaniai.taskify.ui.mainScreen.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_hilt_AddTaskActivity"
+            app:destination="@id/hilt_AddTaskActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_taskDetailFragment2"
+            app:destination="@id/taskDetailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.wadhwaniai.taskify.ui.mainScreen.stats.StatsFragment"
+        android:label="fragment_stats"
+        tools:layout="@layout/fragment_stats" >
+        <action
+            android:id="@+id/action_statsFragment_to_taskDetailFragment2"
+            app:destination="@id/taskDetailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.wadhwaniai.taskify.ui.mainScreen.timer.TimerFragment"
+        android:label="fragment_timer"
+        tools:layout="@layout/fragment_timer" />
+    <activity
+        android:id="@+id/hilt_AddTaskActivity"
+        android:name="com.wadhwaniai.taskify.ui.addTaskScreen.Hilt_AddTaskActivity"
+        android:label="Hilt_AddTaskActivity" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.wadhwaniai.taskify.ui.mainScreen.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.wadhwaniai.taskify.ui.mainScreen.about.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <dialog
+        android:id="@+id/taskDetailFragment2"
+        android:name="com.wadhwaniai.taskify.ui.mainScreen.taskDetail.TaskDetailFragment"
+        android:label="TaskDetailFragment" >
+        <argument
+            android:name="task"
+            app:argType="com.wadhwaniai.taskify.data.models.entity.TaskEntity" />
+    </dialog>
+</navigation>
