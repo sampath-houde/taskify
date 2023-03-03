@@ -1,4 +1,3 @@
-![](media/header_dark.png)
 
 # **Taskify**
 
