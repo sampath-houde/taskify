@@ -130,16 +130,6 @@
             android:text="@string/signInSocial"
             android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption" />
 
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/googleButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="32dp"
-            android:layout_marginTop="24dp"
-            style="@style/googleLoginButton"
-            android:text="Sign up with Google" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

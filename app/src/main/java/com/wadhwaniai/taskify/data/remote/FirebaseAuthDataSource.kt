@@ -25,8 +25,6 @@ class FirebaseAuthDataSource @Inject constructor(
 
     fun logoutUser() = auth.signOut()
 
-    fun getUserData() = auth.currentUser
-
     fun isUserLoggedIn() = auth.currentUser != null
 
     fun removeUser() {
@@ -53,7 +51,7 @@ class FirebaseAuthDataSource @Inject constructor(
             }
         }
 
-    suspend fun signInUsingCredential(credential: AuthCredential) = withContext(Dispatchers.IO) {
+    suspend fun signInUsingCredential(credential: AuthCredential) = withContext(IO) {
         return@withContext try {
             auth.signInWithCredential(credential).await()
             Resource.Success(
@@ -66,7 +64,7 @@ class FirebaseAuthDataSource @Inject constructor(
     }
 
     suspend fun getGoogleAccount(data: Intent): Resource<GoogleSignInAccount> =
-        withContext(Dispatchers.IO) {
+        withContext(IO) {
             try {
                 val task = GoogleSignIn.getSignedInAccountFromIntent(data).await()
                 Resource.Success(data = task)
@@ -85,6 +83,16 @@ class FirebaseAuthDataSource @Inject constructor(
             return@withContext Resource.Success(data = userData)
         } catch (e: Exception) {
             return@withContext Resource.Error(message = "User does not exist")
+        }
+    }
+
+    suspend fun ifUserExists(email: String) : Boolean = withContext(IO) {
+        try {
+            val query = db.collection(USER_COLLECTION_DB)
+                .document(email).id
+            return@withContext true
+        } catch (e: Exception) {
+            return@withContext false
         }
     }
 
