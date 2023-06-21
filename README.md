@@ -25,8 +25,8 @@ Taskify lets you start a timer ⌚ to track the time you take completing a task.
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
 | ![](media/getting_started_dark.jpg) | ![](media/login_dark.jpg) | ![](media/register_dark.jpg) |
 | ![](media/ongoing_dark.jpg)  | ![](media/upcoming_dark.jpg) | ![](media/completed_dark.jpg)    |
-| ![](media/add_task_dark.jpg) | ![](media/stats_dark.jpg)    | ![](media/profile_dark.jpg)      |
-|![](media/menu_dark.jpg)  |![](media/timer_dark.jpg) |
+| ![](media/add_task_dark.jpg) | ![](media/stats_dark.jpg)  |   ![](media/menu_dark.jpg)  |
+| ![](media/timer_dark.jpg) |
 
 ## Built With 🛠
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
